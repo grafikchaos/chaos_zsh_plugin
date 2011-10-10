@@ -39,6 +39,11 @@ alias %=' '
 alias fixpermd='find . -type d -exec chmod 755 {} \;'
 alias fixpermf='find . -type f -exec chmod 644 {} \;'
 
+alias rsync='rsync -avzrtp'
+alias untar='tar -zxvf'
+alias psx='ps auxw | grep $1'
+
+
 # Apache shortcuts
 alias apache='sudo /usr/sbin/apachectl'
 alias apache.graceful='apache graceful'
@@ -67,6 +72,9 @@ alias vhost.new='sudo vi /etc/hosts'
 # MySQL
 # mysqldump proper syntax for large data dumps
 alias mysqldump='mysqldump --opt -Q --order-by-primary'
+
+# keep ssh connections alive
+alias ssh="ssh -o ServerAliveInterval=60"
 
 # ===========
 # FUNCTIONS
