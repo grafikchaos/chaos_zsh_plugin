@@ -41,8 +41,6 @@ alias fixpermf='find . -type f -exec chmod 644 {} \;'
 
 alias rsync='rsync -avzrtp'
 alias untar='tar -zxvf'
-alias psx='ps auxw | grep $1'
-
 
 # Apache shortcuts
 alias apache='sudo /usr/sbin/apachectl'
@@ -89,6 +87,12 @@ function c() {
 function edit_zsh_theme() {
   vi ~/.oh-my-zsh/themes/$1.zsh-theme
 }
+
+# Grep Processes
+function psx() {
+  ps auxw | grep --color=always $1 | grep -v 'grep';
+}
+
 
 #
 # RVM common function to switch to a chosen Ruby's gem directory
